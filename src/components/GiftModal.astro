@@ -1,0 +1,31 @@
+---
+import { BANK_ACCOUNTS } from '../data/invitation';
+---
+
+<div class="modal-backdrop" id="myModal" role="dialog" aria-modal="true" aria-label="Wedding Gift">
+  <span class="close-btn" id="closeModal" aria-label="Tutup">&times;</span>
+  <div class="modal-box">
+    {BANK_ACCOUNTS.map((account) => (
+      <div class="atm-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="card-chip">
+            <img src={account.chipSrc} alt="Chip Logo" />
+          </div>
+          <div class={`bank-logo ${account.logoClass}`}>
+            <img src={account.logoSrc} alt={account.bankName} />
+          </div>
+        </div>
+        <div>
+          <div class="label-card">Nomor Rekening</div>
+          <div class="card-number" data-raw={account.rawNumber}>{account.formattedNumber}</div>
+        </div>
+        <div>
+          <div class="label-card">Nama Pemilik</div>
+          <div class="card-owner">{account.owner}</div>
+        </div>
+        <button type="button" class="copy-btn">Salin Rekening</button>
+        <div class="toast">Nomor rekening tersalin!</div>
+      </div>
+    ))}
+  </div>
+</div>

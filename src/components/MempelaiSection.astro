@@ -1,0 +1,66 @@
+---
+import OrnamentLayers from './OrnamentLayers.astro';
+import { MEMPELAI_ORNAMENTS, WEDDING_INFO } from '../data/invitation';
+
+const { groom, bride, backgrounds } = WEDDING_INFO;
+---
+
+<div id="pagex_3">
+  <div
+    style={`overflow: hidden; text-align: center; padding: 200px 20px 350px 20px; background-color: #3d483f; background-image: url(${backgrounds.temple}); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; color: #E6C47A;`}
+  >
+    <OrnamentLayers layers={MEMPELAI_ORNAMENTS} />
+
+    <!-- Mempelai Content -->
+    <div class="container-fluid content-foreground">
+      <div class="row">
+        <div>
+          <div class="m_font3 sw108292" data-aos="fade-down">
+            <img src="/media/ui/bismillah-putih.png" alt="Bismillah" style="width:150px;" />
+            <br /><br />
+            <i>Assalamu'alaikum Warahmatullahi Wabarakatuh</i>
+            <br /><br />
+            Dengan memohon rahmat dan ridho Allah SWT,<br />
+            Mohon do'a restu Bapak/Ibu/Saudara/i dalam rangka melangsungkan pernikahan putra-putri kami:<br /><br />
+          </div>
+
+          <div data-aos="zoom-out-up">
+            <img
+              class="mempelai_frame"
+              src={groom.photoSrc}
+              alt={groom.name}
+              style="margin: 10px 0px; width: 50%; border-radius: 8%; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);"
+            />
+          </div>
+          <div data-aos="fade-right">
+            <div class="m_font1 sw108291">{groom.name}</div>
+            <div class="m_font5 sw108293">{groom.orderLabel}</div>
+            <div class="m_font3 sw108293">
+              {groom.parents[0]} <br /> {groom.parents[1]}
+            </div>
+          </div>
+
+          <div class="m_font1 sw108294" data-aos="zoom-out-down"><br />&amp;<br /><br /></div>
+
+          <div>
+            <div data-aos="zoom-out-up">
+              <img
+                class="mempelai_frame"
+                src={bride.photoSrc}
+                alt={bride.name}
+                style="margin: 10px 0px; width: 50%; border-radius: 8%; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);"
+              />
+            </div>
+            <div data-aos="fade-left">
+              <div class="m_font1 sw108291">{bride.name}</div>
+              <div class="m_font5 sw108293">{bride.orderLabel}</div>
+              <div class="m_font3 sw108293">
+                {bride.parents[0]} <br /> {bride.parents[1]}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,552 @@
+/* Main Typography, Sections, Widgets & Modal Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.2;
+}
+
+.wedding-title {
+    font-family: 'Dancing Script', cursive;
+}
+
+.wedding-heading {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Local @font-face declarations */
+@font-face {
+    font-family: 'Embassy BT Local';
+    src: url('/fonts/embassybt_regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Embassy Script Local';
+    src: url('/fonts/embassy.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amiri Local';
+    src: url('/fonts/amiri_regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gimetta Marriage Local';
+    src: url('/fonts/gimetta_marriage.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* Custom invitation font stacks using local TTFs + Google Fonts fallback */
+.m_font1 {
+    font-family: 'Embassy BT Local', 'Embassy BT', 'Great Vibes', 'Dancing Script', cursive;
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+.m_font2 {
+    font-family: 'Embassy BT Local', 'Embassy BT', 'Great Vibes', 'Dancing Script', cursive;
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+.m_font3 {
+    font-family: 'Amiri Local', 'Amiri', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.m_font4 {
+    font-family: 'Embassy Script Local', 'Embassy BT Local', 'Embassy BT', 'Great Vibes', 'Dancing Script', cursive;
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+.m_font5 {
+    font-family: 'Gimetta Marriage Local', 'Gimetta Marriage', 'Cormorant Garamond', 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Exact section text style tokens */
+.sw108271 { font-size: 40px; color: #ffffff; padding: 5px; }
+.sw108272 { font-size: 20px; color: #ffffff; }
+.sw108273 { font-size: 20px; color: #ffffff; }
+.sw108282 { color: #fff; }
+.sw108291 { color: #E6C47A; }
+.sw108292 { font-size: 15px; color: #ffffff; }
+.sw108293 { font-size: 17px; color: #ffffff; }
+.sw108294 { font-size: 30px; color: #ffffff; }
+.sw108301 { font-size: 40px; color: #333; }
+.sw108302 { font-size: 20px; color: #333; }
+.sw108303 { font-size: 20px; color: #333; }
+.sw108304 { font-size: 17px; color: #333; }
+.sw108311 { font-size: 30px; color: #333; }
+.sw108312 { color: #000000; }
+.sw108313 { font-size: 20px; color: #fff; font-family: 'Times New Roman', Georgia, serif; }
+.sw108314 { margin: 40px 0px 0px 0px; }
+.sw108322 { color: #333; }
+.sw108351 { font-size: 30px; color: #E6C47A; }
+.sw108352 { font-size: 17px; color: #ffffff; }
+.sw108353 { color: #ffffff; }
+.sw108331 { font-size: 30px; color: #E6C47A; }
+.sw108332 { font-size: 17px; color: #ffffff; }
+.sw108371 { color: #fff; }
+.sw108372 { font-size: 17px; color: #ffffff; }
+.sw108382 { font-size: 12px; }
+
+/* Decorative positioning helpers */
+.ornament-layer {
+    pointer-events: none;
+}
+
+.mirror-x {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+.content-foreground {
+    position: relative;
+    z-index: 20;
+}
+
+/* Loading disc rotation & Floating scroll arrow */
+.loading_arrow {
+    animation: rotation 1s infinite linear;
+}
+
+.floating-text {
+    position: fixed;
+    left: 50%;
+    bottom: 60px;
+    z-index: 65;
+    color: #fff;
+    display: none;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+@media (min-width: 961px) {
+    .floating-text {
+        left: calc(100% - 225px);
+        transform: translateX(-50%);
+    }
+}
+
+.floating-text.visible {
+    display: block;
+}
+
+.geser_atas {
+    width: 35px;
+    filter: invert(0);
+}
+
+.text_cvr {
+    z-index: 10;
+    position: absolute;
+    display: none;
+}
+
+.text_cvr.visible {
+    display: block;
+}
+
+.text_top {
+    width: 100%;
+    top: 40px;
+}
+
+/* Jarallax compatibility */
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Page 1: Hero Swiper */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #2b332d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.swiper-slide .img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 22%;
+    background-repeat: no-repeat;
+    transition: 3s all;
+    transform: scale(1);
+}
+
+.swiper-slide-active .img {
+    animation: scale 5s ease forwards;
+}
+
+/* Page 3: Mempelai oval photo frame */
+.mempelai_frame {
+    border-radius: 220px !important;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0);
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center 12%;
+}
+
+/* Page 6: Gallery crop alignment for portrait photos */
+#responsive-images li img {
+    object-fit: cover;
+    object-position: center 16%;
+}
+
+/* Page 4: Event Card & Countdown */
+.icon_acara {
+    width: 80px;
+}
+
+.btn_acara {
+    background-color: #fff !important;
+    color: #333 !important;
+    border: 2px solid #333;
+    margin-top: 10px;
+    border-radius: 90px;
+    width: 190px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.box_coundown {
+    color: #333;
+    padding: 8px 0px 12px 0px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(0px);
+    border-radius: 7px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.custome_button {
+    background-color: rgb(240, 240, 240);
+    color: #000;
+}
+
+/* Page 7: RSVP Form */
+.rsvp-widget {
+    position: relative;
+    z-index: 20;
+}
+
+.rsvp-container {
+    padding: 50px 15px 70px 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.rsvp-form input,
+.rsvp-form textarea,
+.rsvp-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.rsvp-form input:focus,
+.rsvp-form textarea:focus,
+.rsvp-form select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.rsvp-form input[disabled],
+.rsvp-form textarea[disabled],
+.rsvp-form select[disabled] {
+    background-color: #f5f5f5 !important;
+    color: #666 !important;
+    cursor: not-allowed !important;
+    opacity: 0.7 !important;
+    pointer-events: none !important;
+}
+
+.btn-rsvp {
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.2s ease;
+}
+
+.btn-rsvp:hover {
+    background: #aaaaaa;
+}
+
+.response-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert-info {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+}
+
+/* Page 8: Ucapan Widget */
+.ucapan-widget {
+    padding: 30px 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    position: relative;
+}
+
+.ucapan-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow-y: auto;
+    min-height: 120px;
+    max-height: 500px;
+}
+
+.ucapan-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ucapan-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.ucapan-item {
+    border-bottom: 1px solid rgba(136, 136, 136, 0.4);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.ucapan-name {
+    font-weight: 400;
+}
+
+/* Page 9: Gift Button & Modal */
+.gift-widget {
+    position: relative;
+    z-index: 20;
+}
+
+.custome_button_gift {
+    background-color: rgb(240, 240, 240);
+    color: #000;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    width: 100%;
+    max-width: 400px;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateY(-100px);
+    transition: transform 0.7s ease;
+    position: relative;
+    text-align: left;
+    padding: 30px 10px 90px 10px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-backdrop.show .modal-box {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    background-color: #7a0000;
+    z-index: 1000;
+    border-radius: 30px;
+    line-height: 37px;
+    text-align: center;
+}
+
+.atm-card {
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(220, 220, 220, 0.2)), url('/aseets/bg_gift.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.atm-card:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
+}
+
+.bank-logo img {
+    height: 30px;
+    object-fit: contain;
+}
+
+.card-chip img {
+    height: 35px;
+    object-fit: contain;
+}
+
+.label-card {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.card-number {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #111;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-owner {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+
+.copy-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 6px 12px;
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.toast {
+    position: absolute;
+    bottom: 72px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+

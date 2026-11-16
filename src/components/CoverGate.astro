@@ -1,0 +1,39 @@
+---
+import OrnamentLayers from './OrnamentLayers.astro';
+import MonogramLogo from './MonogramLogo.astro';
+import { COVER_ORNAMENTS, WEDDING_INFO } from '../data/invitation';
+---
+
+<section class="top-cover">
+  <div data-pop="slide-down" id="popup">
+    <!-- Cover Background -->
+    <div
+      class="popup-aos-element ornament-layer"
+      data-aos="zoom-out"
+      data-aos-offset="0"
+      data-aos-delay="0"
+      style={`position:absolute;top:0px;bottom:0px;left:0px;right:0px;background-color:#3d483f;background-image:url(${WEDDING_INFO.backgrounds.temple});background-position:center;background-repeat:no-repeat;background-size:cover;`}
+    ></div>
+
+    <!-- Cover Decoration Ornaments -->
+    <OrnamentLayers layers={COVER_ORNAMENTS} />
+
+    <!-- Cover Foreground Content -->
+    <div class="cover" style="margin-top: -100px;">
+      <div data-aos="zoom-out" data-aos-delay="800" class="popup-aos-element" style="text-align: center;overflow: visible;">
+        <MonogramLogo className="logo" color="#E6C47A" />
+      </div>
+      <div data-aos="zoom-out" data-aos-delay="800" class="popup-aos-element box_penerima" style="overflow: visible;">
+        <div class="alamat dear">Kepada Yth,</div>
+        <div class="penerima">Bapak/Ibu/Saudara/Saudari</div>
+        <div class="line_penerima"></div>
+        <div class="alamat">Di Tempat</div>
+      </div>
+      <div data-aos="zoom-out" data-aos-delay="800" class="popup-aos-element" style="text-align: center;">
+        <button type="button" id="popupclose" class="button button_penerima">
+          <span style="position: relative; bottom: 0px;">Buka Undangan</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

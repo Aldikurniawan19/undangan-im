@@ -1,0 +1,63 @@
+---
+import OrnamentLayers from './OrnamentLayers.astro';
+import { RSVP_LOWER_ORNAMENTS, RSVP_UPPER_ORNAMENTS, WEDDING_INFO } from '../data/invitation';
+---
+
+<div id="pagex_7">
+  <div
+    style={`overflow: hidden; text-align: center; padding: 180px 20px 230px 20px; background-color: #2d352e; background-image: url(${WEDDING_INFO.backgrounds.errol}); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; color: #E6C47A;`}
+  >
+    <OrnamentLayers layers={RSVP_LOWER_ORNAMENTS} />
+
+    <!-- Dark Translucent Backdrop Card -->
+    <div
+      class="ornament-layer"
+      data-aos="zoom-in"
+      data-aos-offset="0"
+      data-aos-delay="0"
+      style="opacity:1;position:absolute;top:60px;bottom:60px;left:20px;right:20px;background-color:rgba(0,0,0,0.5);box-shadow:0 1px 6px #777;border-radius:20px;"
+    ></div>
+
+    <OrnamentLayers layers={RSVP_UPPER_ORNAMENTS} />
+
+    <!-- RSVP Widget -->
+    <div class="rsvp-widget" id="rsvp-section-10835">
+      <div class="rsvp-container">
+        <div class="m_font4 sw108351">RSVP</div>
+        <div style="text-align: left;" class="m_font3 sw108352">
+          Dimohon kesediaannya untuk mengisi konfirmasi kehadiran dan ucapan untuk kedua mempelai di bawah ini:<br /><br />
+        </div>
+        <div class="rsvp-content">
+          <form id="rsvpForm_10835" class="rsvp-form">
+            <div class="form-group" id="wrap_10835_52">
+              <label for="f_10835_52" class="m_font3 sw108353">Nama <span class="required">*</span></label>
+              <input placeholder="Nama Lengkap" type="text" id="f_10835_52" name="f_52" value="" required />
+            </div>
+            <div class="form-group" id="wrap_10835_53">
+              <label for="f_10835_53" class="m_font3 sw108353">Konfirmasi <span class="required">*</span></label>
+              <select id="f_10835_53" name="f_53" required>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak">Tidak</option>
+              </select>
+            </div>
+            <div class="form-group" id="wrap_10835_54">
+              <label for="f_10835_54" class="m_font3 sw108353">Jumlah Hadir <span class="required">*</span></label>
+              <select id="f_10835_54" name="f_54" required>
+                <option value="">-- pilih jumlah --</option>
+                <option value="1">1 Orang</option>
+                <option value="2">2 Orang</option>
+                <option value="3">3 Orang</option>
+              </select>
+            </div>
+            <div class="form-group" id="wrap_10835_55">
+              <label for="f_10835_55" class="m_font3 sw108353">Ucapan</label>
+              <textarea placeholder="Tuliskan doa dan ucapan untuk kedua mempelai..." rows="4" id="f_10835_55" name="f_55"></textarea>
+            </div>
+            <button type="submit" id="submitBtn_10835" class="btn-rsvp">Kirim Konfirmasi</button>
+          </form>
+          <div id="responseMessage_10835" class="response-message" style="display: none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

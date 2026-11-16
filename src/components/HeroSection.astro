@@ -1,0 +1,32 @@
+---
+import { WEDDING_INFO } from '../data/invitation';
+---
+
+<div id="pagex_1">
+  <div style="position: relative; overflow: hidden; text-align: center; padding: 0px; color: #333;">
+    <div style="z-index: 2; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%); position: absolute; top: 0; left: 0; bottom: 0px; right: 0px;"></div>
+    <div>
+      <div style="position: relative; height: 100vh;" class="multiple_slide parallax">
+        <div class="swiper-container">
+          <div class="swiper-wrapper" id="blurTarget">
+            {WEDDING_INFO.heroSlides.map((slideSrc) => (
+              <div class="swiper-slide">
+                <div class="img" style={`background-image: url('${slideSrc}');`}></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div id="overlay" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 10; opacity: 0; transition: opacity 0.2s linear; pointer-events: none;"></div>
+      <div class="text_top text_cvr">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="m_font3 sw108272" data-aos="zoom-out-down" data-aos-delay="900" data-aos-once="false">The Wedding of</div>
+            <div class="m_font2 sw108271" data-aos="zoom-out-up" data-aos-delay="800" data-aos-once="false">{WEDDING_INFO.shortTitle}</div>
+            <div class="m_font3 sw108273" data-aos="zoom-out-up" data-aos-delay="900" data-aos-once="false">{WEDDING_INFO.dateDisplay}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

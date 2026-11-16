@@ -1,0 +1,140 @@
+/* Cover Gate (#popup) & Transition Styles */
+#popup {
+    overflow: hidden;
+    position: fixed;
+    background: #3d483f;
+    height: 100%;
+    width: 100%;
+    max-width: 450px;
+    z-index: -1;
+    visibility: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: visibility 0s, z-index 0s, opacity 1s ease-in-out;
+}
+
+@media only screen and (max-width: 1199px) {
+    #popup {
+        max-width: 100% !important;
+    }
+}
+
+#popup .cover {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 20;
+}
+
+#popup .popup-aos-element {
+    overflow: hidden;
+}
+
+#popup .popup-aos-element img {
+    height: auto;
+}
+
+#popup div[style*="position: absolute"] {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#popupclose {
+    cursor: pointer;
+}
+
+#popup[data-pop="slide-down"] {
+    top: -100%;
+    transition: top 1.2s ease-in-out, visibility 0s linear 1.2s, z-index 0s linear 1.2s;
+}
+
+#popup[data-pop="slide-down"].show {
+    visibility: visible;
+    z-index: 200;
+    opacity: 1;
+    top: 0;
+    transition: top 0.7s ease-in-out, visibility 0.7s, z-index 0.7s, opacity 0.7s ease-in-out;
+}
+
+#popup[data-pop="slide-down"].hide {
+    top: -100%;
+    opacity: 0;
+    transition: top 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#popup[data-pop="slide-down"].show ~ #overlay {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+    transition: opacity 1s ease-in-out;
+}
+
+.cover {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+}
+
+.logo {
+    width: 180px;
+    margin: -50px 0px 40px 0px;
+}
+
+.box_penerima {
+    margin: -90px 0px -30px 0px;
+    padding: 70px 0px;
+    text-align: center;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+.penerima {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.alamat {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0px 0px 10px 0px;
+}
+
+.line_penerima {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, transparent, #FFFFFF, transparent);
+    background-size: 70% 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button {
+    padding: 0.70rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 190px;
+    font-size: 14px;
+    box-shadow: 0 5px 10px 0px rgba(150, 150, 150, 0.5);
+}
+
+.button:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button_penerima {
+    padding: 0.70rem 1.5rem;
+    min-width: 180px;
+    text-transform: uppercase;
+    height: 45px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #E6C47A;
+    color: #fff;
+}
+

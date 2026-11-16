@@ -1,0 +1,82 @@
+---
+import { WEDDING_INFO } from '../data/invitation';
+
+const { venue, dateDisplay, timeDisplay, calendarUrl, backgrounds } = WEDDING_INFO;
+const countdownBoxes = [
+  { id: 'hari', label: 'Hari' },
+  { id: 'jam', label: 'Jam' },
+  { id: 'menit', label: 'Menit' },
+  { id: 'detik', label: 'Detik' },
+];
+---
+
+<div id="pagex_4">
+  <div style="overflow: hidden; text-align: center; padding: 100px 20px 100px 20px; background-color: #e3e3e3; color: #333;" class="jarallax">
+    <img class="jarallax-img" src={backgrounds.resepsi} alt="Background Resepsi" />
+    <div>
+      <div style="padding: 12px 10px; background-color: rgba(230, 196, 122, 0.5); border-radius: 300px; box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6); margin-bottom: 30px; color: #333;">
+        <div class="frame_acara_layer" style="padding: 120px 10px 130px 10px; background-color: rgba(230, 196, 122, 0.5); border-radius: 300px; box-shadow: 0 0px 7px 0 rgb(118, 118, 118);">
+          <div class="frame_acara" data-aos="fade-up">
+            <div class="container-fluid">
+              <div class="row">
+                <div>
+                  <div data-aos="zoom-out-up">
+                    <img src="/media/ui/wedding_ring.png" alt="Cincin" class="icon_acara" />
+                  </div>
+                  <div class="m_font4 sw108301" data-aos="zoom-out-up" style="font-size: 40px;">Resepsi</div>
+                  <br /><br />
+                  <div class="m_font3 sw108302" data-aos="zoom-out-down"><b>{dateDisplay}</b></div>
+                  <br /><br />
+                  <div class="m_font3 sw108303" data-aos="zoom-out-down">{timeDisplay}</div>
+                  <br /><br />
+                  <div>
+                    <div class="m_font3 sw108304" data-aos="fade-down">
+                      <b style="font-size: 20px;">{venue.name}</b><br />
+                      {venue.addressLine}<br />
+                      {venue.regionLine}
+                    </div>
+                    <div data-aos="fade-down" style="margin-top: 10px;">
+                      <a href={venue.mapsUrl} target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="button btn_acara">
+                          <span><i class="fa fa-map-marker"></i> Buka GMAPS</span>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative;">
+      <div>
+        <div class="m_font3 sw108313">Hitung Mundur Acara Resepsi</div>
+      </div>
+      <table style="width: 100%; text-align: center; margin-top: 10px;">
+        <tr>
+          {countdownBoxes.map((box, index) => (
+            <>
+              {index > 0 && <td>&nbsp;</td>}
+              <td style="width: 23%; text-align: center;">
+                <div class="box_coundown custome_countdown_box" data-aos="zoom-out-up">
+                  <div id={box.id} class="m_font4 sw108311">-</div>
+                  <div class="m_font3 sw108312">{box.label}</div>
+                </div>
+              </td>
+            </>
+          ))}
+        </tr>
+      </table>
+      <div data-aos="zoom-out-up">
+        <a href={calendarUrl} target="_blank" rel="nofollow noopener noreferrer">
+          <button type="button" class="button sw108314 custome_button">
+            <i class="fa fa-calendar-plus-o"></i> Simpan Tanggal
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

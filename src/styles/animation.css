@@ -1,0 +1,188 @@
+/* Keyframe Animations (Ornament Sway, Hero Scale, Disc Rotation, Falling Petals) */
+@keyframes anim_left {
+  0%, 100% { transform: rotate(0deg); transform-origin: 0 50%; }
+  10% { transform: rotate(2deg); }
+  20%, 40%, 60% { transform: rotate(-4deg); }
+  30%, 50%, 70% { transform: rotate(4deg); }
+  80% { transform: rotate(-2deg); }
+  90% { transform: rotate(2deg); }
+}
+
+@keyframes anim_right {
+  0%, 100% { transform: rotate(0deg); transform-origin: 100% 50%; }
+  10% { transform: rotate(2deg); }
+  20%, 40%, 60% { transform: rotate(-4deg); }
+  30%, 50%, 70% { transform: rotate(4deg); }
+  80% { transform: rotate(-2deg); }
+  90% { transform: rotate(2deg); }
+}
+
+@keyframes anim_right2 {
+  0%, 100% { transform: translateY(0) rotate(0); transform-origin: 50% 50%; }
+  15% { transform: translateY(-30px) rotate(6deg); }
+  30% { transform: translateY(15px) rotate(-6deg); }
+  45% { transform: translateY(-15px) rotate(3.6deg); }
+  60% { transform: translateY(9px) rotate(-2.4deg); }
+  75% { transform: translateY(-6px) rotate(1.2deg); }
+}
+
+@keyframes anim_left2 {
+  0%, 100% { transform: translateY(0) rotate(0); transform-origin: 50% 50%; }
+  15% { transform: translateY(-30px) rotate(-6deg); }
+  30% { transform: translateY(15px) rotate(6deg); }
+  45% { transform: translateY(-15px) rotate(-3.6deg); }
+  60% { transform: translateY(9px) rotate(2.4deg); }
+  75% { transform: translateY(-6px) rotate(-1.2deg); }
+}
+
+@keyframes anim_bottom {
+  0%, 100% { transform: translateX(0%); transform-origin: 50% 50%; }
+  15% { transform: translateX(-30px) rotate(-6deg); }
+  30% { transform: translateX(15px) rotate(6deg); }
+  45% { transform: translateX(-15px) rotate(-3.6deg); }
+  60% { transform: translateX(9px) rotate(2.4deg); }
+  75% { transform: translateX(-6px) rotate(-1.2deg); }
+}
+
+@keyframes anim_bottom_r {
+  0%, 100% { transform: translateX(0%); transform-origin: 50% 50%; }
+  30% { transform: translateX(15px) rotate(6deg); }
+  60% { transform: translateX(9px) rotate(2.4deg); }
+}
+
+@keyframes anim_bottom_l {
+  0%, 100% { transform: translateX(0%); transform-origin: 50% 50%; }
+  30% { transform: translateX(-15px) rotate(-6deg); }
+  60% { transform: translateX(-9px) rotate(-2.4deg); }
+}
+
+@keyframes anim_top {
+  0%, 100% { transform: translateX(0%); transform-origin: 50% 50%; }
+  15% { transform: translateX(-30px) rotate(6deg); }
+  30% { transform: translateX(15px) rotate(-6deg); }
+  45% { transform: translateX(-15px) rotate(3.6deg); }
+  60% { transform: translateX(9px) rotate(-2.4deg); }
+  75% { transform: translateX(-6px) rotate(1.2deg); }
+}
+
+@keyframes anim_top_l {
+  0%, 100% { transform: translateY(0%); transform-origin: 50% 0%; }
+  30% { transform: translateY(-15px) rotate(-6deg); }
+  60% { transform: translateY(-9px) rotate(-2.4deg); }
+}
+
+@keyframes anim_top_r {
+  0%, 100% { transform: translateY(0%); transform-origin: 50% 0%; }
+  30% { transform: translateY(-15px) rotate(6deg); }
+  60% { transform: translateY(-9px) rotate(2.4deg); }
+}
+
+@keyframes anim_rl {
+  0%, 100% { transform: translateX(0%); }
+  25% { transform: translateX(25px); }
+  50% { transform: translateX(0%); }
+  75% { transform: translateX(-25px); }
+}
+
+@keyframes scale {
+  0% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20%, 40%, 60%, 80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Sakura 1.1.1 falling golden petals */
+@keyframes fall {
+  0% { opacity: 0.9; top: 0; }
+  100% { opacity: 0.2; top: 100%; }
+}
+
+@keyframes blow-soft-left {
+  0% { margin-left: 0; }
+  100% { margin-left: -50%; }
+}
+
+@keyframes blow-medium-left {
+  0% { margin-left: 0; }
+  100% { margin-left: -100%; }
+}
+
+@keyframes blow-soft-right {
+  0% { margin-left: 0; }
+  100% { margin-left: 50%; }
+}
+
+@keyframes blow-medium-right {
+  0% { margin-left: 0; }
+  100% { margin-left: 100%; }
+}
+
+@keyframes sway-0 {
+  0% { transform: rotate(-5deg); }
+  40% { transform: rotate(28deg); }
+  100% { transform: rotate(3deg); }
+}
+
+@keyframes sway-1 {
+  0% { transform: rotate(10deg); }
+  40% { transform: rotate(43deg); }
+  100% { transform: rotate(15deg); }
+}
+
+@keyframes sway-2 {
+  0% { transform: rotate(15deg); }
+  40% { transform: rotate(56deg); }
+  100% { transform: rotate(22deg); }
+}
+
+@keyframes sway-3 {
+  0% { transform: rotate(25deg); }
+  40% { transform: rotate(74deg); }
+  100% { transform: rotate(37deg); }
+}
+
+@keyframes sway-4 {
+  0% { transform: rotate(40deg); }
+  40% { transform: rotate(68deg); }
+  100% { transform: rotate(25deg); }
+}
+
+@keyframes sway-5 {
+  0% { transform: rotate(50deg); }
+  40% { transform: rotate(78deg); }
+  100% { transform: rotate(40deg); }
+}
+
+@keyframes sway-6 {
+  0% { transform: rotate(65deg); }
+  40% { transform: rotate(92deg); }
+  100% { transform: rotate(58deg); }
+}
+
+@keyframes sway-7 {
+  0% { transform: rotate(72deg); }
+  40% { transform: rotate(118deg); }
+  100% { transform: rotate(68deg); }
+}
+
+@keyframes sway-8 {
+  0% { transform: rotate(94deg); }
+  40% { transform: rotate(136deg); }
+  100% { transform: rotate(82deg); }
+}
+
+.sakura {
+  pointer-events: none;
+  position: fixed;
+  z-index: 60;
+}
+

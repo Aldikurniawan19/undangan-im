@@ -1,0 +1,64 @@
+---
+import InvitationLayout from '../layouts/InvitationLayout.astro';
+import EnvelopeIntro from '../components/EnvelopeIntro.astro';
+import CoverGate from '../components/CoverGate.astro';
+import HeroSection from '../components/HeroSection.astro';
+import QuoteSection from '../components/QuoteSection.astro';
+import MempelaiSection from '../components/MempelaiSection.astro';
+import EventSection from '../components/EventSection.astro';
+import LoveStorySection from '../components/LoveStorySection.astro';
+import GallerySection from '../components/GallerySection.astro';
+import RsvpSection from '../components/RsvpSection.astro';
+import UcapanSection from '../components/UcapanSection.astro';
+import GiftSection from '../components/GiftSection.astro';
+import ClosingSection from '../components/ClosingSection.astro';
+import FooterSection from '../components/FooterSection.astro';
+import FloatingControls from '../components/FloatingControls.astro';
+import GiftModal from '../components/GiftModal.astro';
+import { WEDDING_INFO } from '../data/invitation';
+---
+
+<InvitationLayout title={WEDDING_INFO.pageTitle}>
+  <!-- Main Side-to-Side Layout -->
+  <section class="kat-page__side-to-side">
+    <!-- Primary Pane (Desktop Left Off-White Backdrop) -->
+    <section class="primary-pane" style="background-image: url('');"></section>
+
+    <!-- Secondary Pane (Mobile Frame / Invitation Column) -->
+    <section class="secondary-pane" id="container-induk">
+      <EnvelopeIntro />
+      <CoverGate />
+
+      <!-- White Block for Transition -->
+      <div
+        id="block_white"
+        style="display: none; position: fixed; top: 0px; right: 0px; bottom: 0px; background-color: #fff; z-index: 10;"
+      ></div>
+
+      <!-- Main Scrollable Invitation Content -->
+      <div id="main-content" style="display: none; position: relative; z-index: 50;">
+        <HeroSection />
+        <QuoteSection />
+        <MempelaiSection />
+        <EventSection />
+        <LoveStorySection />
+        <GallerySection />
+        <RsvpSection />
+        <UcapanSection />
+        <GiftSection />
+        <ClosingSection />
+        <FooterSection />
+      </div>
+
+      <!-- Floating Scroll-Down Indicator -->
+      <div id="floating" class="floating-text">
+        <div style="text-align: center;" data-aos="fade-up" data-aos-delay="1000">
+          <img src="/media/ui/scroll2.gif" alt="Scroll Down" class="geser_atas" />
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <FloatingControls />
+  <GiftModal />
+</InvitationLayout>

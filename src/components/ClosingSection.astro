@@ -1,0 +1,46 @@
+---
+import MonogramLogo from './MonogramLogo.astro';
+import { WEDDING_INFO } from '../data/invitation';
+
+const { groom, bride, shortTitle, backgrounds } = WEDDING_INFO;
+---
+
+<div id="pagex_11">
+  <div style="overflow: hidden; text-align: center; padding: 200px 20px 200px 20px; background-color: #ffc7e8; color: #333;" class="jarallax">
+    <img class="jarallax-img" src={backgrounds.closing} alt="Background Penutup" />
+    <div style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 50px; bottom: 50px; left: 15px; right: 15px; border-radius: 220px;"></div>
+    <div class="content-foreground">
+      <div class="container-fluid" style="text-align: center;">
+        <div class="row">
+          <div>
+            <div class="m_font3 sw108372" data-aos="zoom-out-down" data-aos-once="false">
+              <div style="margin-top: -25px;">
+                <MonogramLogo color="#ffffff" sizeStyle="width: 100px; height: 100px; overflow: visible;" />
+              </div>
+              <br /><br />
+              Setiap momen indah terasa lebih berarti ketika dibagikan bersama orang-orang terkasih. Kami berharap Anda dapat menjadi bagian dari cerita yang akan kami kenang selamanya.
+              <br /><br />
+              Sampai jumpa di hari istimewa kami.
+              <br /><br />
+              Wassalamu'alaikum Warahmatullahi Wabarakatuh
+              <br /><br />
+              <table style="width: 100%; font-size: 15px;">
+                <tr>
+                  <td style="width: 180px; text-align: left; vertical-align: top;">
+                    {groom.parents[0]} <br /> {groom.parents[1]}
+                  </td>
+                  <td></td>
+                  <td style="width: 180px; text-align: right;">
+                    {bride.parents[0]} <br /> {bride.parents[1]}
+                  </td>
+                </tr>
+              </table>
+              <br />
+            </div>
+            <div class="m_font2 sw108371" data-aos="zoom-out-up" data-aos-once="false">{shortTitle}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+---
+import { WEDDING_INFO } from '../data/invitation';
+---
+
+<!-- Floating Music Toggle -->
+<div class="button_musik" style="position: fixed; bottom: 95px; right: 27px; z-index: 100; text-align: center;">
+  <div style="text-align: center;">
+    <div id="btn_play">
+      <button
+        type="button"
+        id="btnPauseTrigger"
+        class="button loading_arrow"
+        aria-label="Pause Music"
+        style="min-width: 35px; padding: 0px; background-color: rgba(0, 0, 0, 0); color: #333; margin-top: 10px; width: 35px; height: 35px; border-radius: 35px;"
+      >
+        <img src="/media/ui/disk.png" alt="Music Disc" style="width: 35px; margin-top: 0px;" />
+      </button>
+    </div>
+    <div id="btn_stop" style="display: none;">
+      <button
+        type="button"
+        id="btnPlayTrigger"
+        class="button"
+        aria-label="Play Music"
+        style="min-width: 35px; padding: 0px; background-color: #fff; color: rgba(0, 0, 0, 0); margin-top: 10px; width: 35px; height: 35px; border-radius: 35px;"
+      >
+        <img src="/media/ui/disk.png" alt="Music Disc Paused" style="width: 35px; margin-top: 0px;" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Background Music -->
+<audio id="audio" src={WEDDING_INFO.audioSrc} loop preload="auto"></audio>

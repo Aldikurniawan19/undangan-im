@@ -1,0 +1,22 @@
+---
+import type { OrnamentLayer } from '../data/invitation';
+
+interface Props {
+  layers: OrnamentLayer[];
+}
+
+const { layers } = Astro.props;
+---
+
+{layers.map((layer) => (
+  <div
+    class={layer.isPopupElement ? 'popup-aos-element ornament-layer' : 'ornament-layer'}
+    data-aos={layer.aos}
+    data-aos-offset={layer.offset ?? 0}
+    data-aos-duration={layer.duration}
+    data-aos-delay={layer.delay}
+    style={layer.containerStyle}
+  >
+    <img src={layer.src} alt="" style={layer.imgStyle} />
+  </div>
+))}
