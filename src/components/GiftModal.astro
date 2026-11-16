@@ -9,10 +9,10 @@ import { BANK_ACCOUNTS } from '../data/invitation';
       <div class="atm-card">
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <div class="card-chip">
-            <img src={account.chipSrc} alt="Chip Logo" />
+            <img src={account.chipSrc} alt="Chip Logo" loading="lazy" decoding="async" />
           </div>
           <div class={`bank-logo ${account.logoClass}`}>
-            <img src={account.logoSrc} alt={account.bankName} />
+            <img src={account.logoSrc} alt={account.bankName} loading="lazy" decoding="async" />
           </div>
         </div>
         <div>

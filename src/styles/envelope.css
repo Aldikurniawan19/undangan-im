@@ -113,7 +113,7 @@
     height: 100vh;
     overflow: hidden;
     background-color: #3d483f;
-    background-image: url('/aseets/bg-temple.jpg');
+    background-image: url('/aseets/bg-temple.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -240,11 +240,11 @@
     inset: 0;
     overflow: hidden;
     pointer-events: none;
-    -webkit-mask-image: url('/aseets/Ornate%20Golden%20Wayang%20Emblem.png');
+    -webkit-mask-image: url('/aseets/Ornate%20Golden%20Wayang%20Emblem.webp');
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    mask-image: url('/aseets/Ornate%20Golden%20Wayang%20Emblem.png');
+    mask-image: url('/aseets/Ornate%20Golden%20Wayang%20Emblem.webp');
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;

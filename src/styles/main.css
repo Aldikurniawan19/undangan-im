@@ -460,7 +460,7 @@ body {
     justify-content: space-between;
     background-color: #f4f4f4;
     margin-top: 20px;
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(220, 220, 220, 0.2)), url('/aseets/bg_gift.jpg');
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(220, 220, 220, 0.2)), url('/aseets/bg_gift.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

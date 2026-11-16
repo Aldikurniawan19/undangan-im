@@ -16,7 +16,7 @@ const { groom, bride, backgrounds } = WEDDING_INFO;
       <div class="row">
         <div>
           <div class="m_font3 sw108292" data-aos="fade-down">
-            <img src="/media/ui/bismillah-putih.png" alt="Bismillah" style="width:150px;" />
+            <img src="/media/ui/bismillah-putih.webp" alt="Bismillah" style="width:150px;" loading="lazy" decoding="async" />
             <br /><br />
             <i>Assalamu'alaikum Warahmatullahi Wabarakatuh</i>
             <br /><br />
@@ -29,6 +29,8 @@ const { groom, bride, backgrounds } = WEDDING_INFO;
               class="mempelai_frame"
               src={groom.photoSrc}
               alt={groom.name}
+              loading="lazy"
+              decoding="async"
               style="margin: 10px 0px; width: 50%; border-radius: 8%; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);"
             />
           </div>
@@ -48,6 +50,8 @@ const { groom, bride, backgrounds } = WEDDING_INFO;
                 class="mempelai_frame"
                 src={bride.photoSrc}
                 alt={bride.name}
+                loading="lazy"
+                decoding="async"
                 style="margin: 10px 0px; width: 50%; border-radius: 8%; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);"
               />
             </div>

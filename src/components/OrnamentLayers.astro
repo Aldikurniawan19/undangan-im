@@ -17,6 +17,12 @@ const { layers } = Astro.props;
     data-aos-delay={layer.delay}
     style={layer.containerStyle}
   >
-    <img src={layer.src} alt="" style={layer.imgStyle} />
+    <img
+      src={layer.src}
+      alt=""
+      loading={layer.isPopupElement ? 'eager' : 'lazy'}
+      decoding="async"
+      style={layer.imgStyle}
+    />
   </div>
 ))}
